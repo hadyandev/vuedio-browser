@@ -14,7 +14,7 @@ export default {
     SearchBar // SearchBar: SearchBar
   },
   methods: {
-    onTermChange: function(searchTerm) {
+    onTermChange(searchTerm) {
       alert(searchTerm);
     }
   }

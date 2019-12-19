@@ -8,7 +8,7 @@
 export default {
   name: "SearchBar",
   methods: {
-    onInput: function(event) {
+    onInput(event) {
       // emitting event to parent component (App)
       this.$emit("termChange", event.target.value);
     }
