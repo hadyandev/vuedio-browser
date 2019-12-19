@@ -9,7 +9,8 @@ export default {
   name: "SearchBar",
   methods: {
     onInput: function(event) {
-      alert(event.target.value);
+      // emitting event to parent component (App)
+      this.$emit("termChange", event.target.value);
     }
   }
 };
