@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <SearchBar @termChange="onTermChange"></SearchBar>
-    <VideoList :videos="videos"></VideoList>
+    <VideoList @videoSelect="onVideoSelect" :videos="videos"></VideoList>
   </div>
 </template>
 
@@ -40,6 +40,10 @@ export default {
           // update videos property with data from api
           this.videos = response.data.items;
         });
+    },
+
+    onVideoSelect(video) {
+      console.log(video);
     }
   }
 };
