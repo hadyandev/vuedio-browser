@@ -6,7 +6,13 @@
 
 <script>
 export default {
-  name: "VideoList"
+  name: "VideoList",
+  //   props without validation
+  //   props: ["videos"]
+  //   props with validation (recommended)
+  props: {
+    videos: Array
+  }
 };
 </script>
 
