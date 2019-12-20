@@ -18,6 +18,12 @@ export default {
     SearchBar, // SearchBar: SearchBar
     VideoList
   },
+  // data property on vue component MUST be a function
+  data() {
+    return {
+      videos: []
+    };
+  },
   methods: {
     onTermChange(searchTerm) {
       axios
@@ -29,7 +35,10 @@ export default {
             q: searchTerm
           }
         })
-        .then(response => console.log(response));
+        .then(response => {
+          // update videos property with data from api
+          this.videos = response.data.items;
+        });
     }
   }
 };
