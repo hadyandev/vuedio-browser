@@ -1,7 +1,7 @@
 <template>
   <div>
     <SearchBar @termChange="onTermChange"></SearchBar>
-    <VideoList></VideoList>
+    <VideoList :videos="videos"></VideoList>
   </div>
 </template>
 
@@ -25,6 +25,7 @@ export default {
     };
   },
   methods: {
+    // searchTerm adalah value yg didapat dari search bar (event.target.value yang didefinisikan di SearchBar component)
     onTermChange(searchTerm) {
       axios
         .get("https://www.googleapis.com/youtube/v3/search", {
