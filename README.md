@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/652c313a-2f6a-4c73-a2cd-591cf459ca66/deploy-status)](https://app.netlify.com/sites/vuedio-browser/deploys)
 # video-browser
 
 ## Project setup
